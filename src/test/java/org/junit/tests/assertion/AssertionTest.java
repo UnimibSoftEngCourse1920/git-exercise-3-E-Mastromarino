@@ -53,6 +53,7 @@ public class AssertionTest {
         throw new AssertionError(ASSERTION_ERROR_EXPECTED);
     }
     
+<<<<<<< HEAD
     
     
  @Test
@@ -66,6 +67,13 @@ public class AssertionTest {
  
  
  
+=======
+    @Test(expected = AssertionError.class)
+    public void assertGreaterThan() {
+        Assert.assertGreaterThan(0,100,new Comparator<int>() );
+    }
+    
+>>>>>>> refs/heads/greater-primitives
     @Test
     public void failWithMessageToString() {
         try {

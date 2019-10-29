@@ -39,11 +39,20 @@ public class Assert {
     /**
      * Asserts that a condition is true. If it isn't it throws an
      * {@link AssertionError} with the given message.
+     * @param <T>
      *
      * @param message the identifying message for the {@link AssertionError} (<code>null</code>
      * okay)
      * @param condition condition to be checked
      */
+    public static <T> void assertGreaterThan(int  o1,int o2, java.util.Comparator<T> comparator) {
+        
+        int compare = comparator.compare(o1,o2);
+        assertTrue(compare>0);
+        
+        //greater primitives
+      }
+    
     public static void assertTrue(String message, boolean condition) {
         if (!condition) {
             fail(message);

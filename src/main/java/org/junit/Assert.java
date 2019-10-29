@@ -1,5 +1,7 @@
 package org.junit;
 
+import java.util.Comparator;
+
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.junit.internal.ArrayComparisonFailure;
@@ -25,6 +27,11 @@ public class Assert {
     /**
      * Protect constructor since it is a static only class
      */
+    
+
+    
+    
+    
     protected Assert() {
     }
 
@@ -955,4 +962,13 @@ public class Assert {
             Matcher<? super T> matcher) {
         MatcherAssert.assertThat(reason, actual, matcher);
     }
+
+    public static <T> void assertGreaterThan(T o2,T o1, Comparator<T> comparator) {
+        
+        int com = comparator.compare(o1,o2);
+        assertTrue(com>0);
+      }
+      
+
+
 }

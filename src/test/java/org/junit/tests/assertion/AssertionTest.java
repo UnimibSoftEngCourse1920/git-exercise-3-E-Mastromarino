@@ -51,7 +51,12 @@ public class AssertionTest {
         }
         throw new AssertionError(ASSERTION_ERROR_EXPECTED);
     }
-
+    
+    @Test(expected = AssertionError.class)
+    public void assertGreaterThan() {
+        Assert.assertGreaterThan(0,100,new Comparator<int>() );
+    }
+    
     @Test
     public void failWithMessageToString() {
         try {

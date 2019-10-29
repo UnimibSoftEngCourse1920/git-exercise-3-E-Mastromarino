@@ -1,5 +1,7 @@
 package org.junit;
 
+import java.util.Comparator;
+
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.junit.function.ThrowingRunnable;
@@ -26,6 +28,11 @@ public class Assert {
     /**
      * Protect constructor since it is a static only class
      */
+    
+
+    
+    
+    
     protected Assert() {
     }
 
@@ -964,6 +971,7 @@ public class Assert {
         MatcherAssert.assertThat(reason, actual, matcher);
     }
 
+<<<<<<< HEAD
     /**
      * Asserts that {@code runnable} throws an exception of type {@code expectedThrowable} when
      * executed. If it does, the exception object is returned. If it does not throw an exception, an
@@ -1031,4 +1039,14 @@ public class Assert {
     private static String buildPrefix(String message) {
         return message != null && message.length() != 0 ? message + ": " : "";
     }
+=======
+    public static <T> void assertGreaterThan(T o2,T o1, Comparator<T> comparator) {
+        
+        int com = comparator.compare(o1,o2);
+        assertTrue(com>0);
+      }
+      
+
+
+>>>>>>> refs/heads/greater
 }

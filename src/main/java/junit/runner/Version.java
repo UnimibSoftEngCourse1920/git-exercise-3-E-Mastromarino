@@ -9,7 +9,11 @@ public class Version {
 	}
 
 	public static String id() {
+<<<<<<< HEAD
 		return "4.13-SNAPSHOT";
+=======
+		return "4.12";
+>>>>>>> refs/heads/greater
 	}
 	
 	public static void main(String[] args) {
